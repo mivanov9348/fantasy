@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #f3f3f3;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.main-content {
+  width: 70%;
+  padding: 20px;
+}
+
+.info-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.personality {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 1px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 200px;
+}
+
+.personality label {
+  display: block;
+  margin-bottom: 2px;
+  color: #333;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.personality input {
+  width: 50%;
+  padding: 2px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.info-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: auto;
+}
