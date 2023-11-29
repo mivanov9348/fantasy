@@ -2,35 +2,82 @@
   display: flex;
   width: 100%;
   min-height: 100vh;
+  background-color: gainsboro;
 }
 
 .sidebar {
   width: 25%;
-  background-color: #f3f3f3;
+  background-color: #707070; /* Lighter background */
+  border: 2px solid #2d2d2d; /* Softer border color */
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
 }
+
+.profile-photo img {
+  border-radius: 15px;
+  border: 1px solid #333; /* Softer border for image */
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.information {
+  text-align: left; /* Align text to the left for better readability */
+  font-size: 14px; /* Increase font size */
+  font-family: Arial, sans-serif; /* Change font family */
+  color: #dbdbdb; /* Darker color for better readability */
+  margin-top: 20px; /* Space above the information */
+}
+
+.information p {
+  margin-bottom: 10px; /* Space between paragraphs */
+  line-height: 1.5; /* Increase line height for readability */
+}
+
+.descriptionText {
+  font-size: 9px;
+  font-style: italic;
+  width: 100%; /* Set to 100% to use the full width of the parent container */
+  max-width: 200px; /* Optional: Set a maximum width */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensures wrapping of long words */
+  overflow: auto; /* Adds scrollbar if content overflows */
+  white-space: normal; /* Allows text wrapping */
+  height: auto; /* Adjust height automatically */
+  margin-bottom: 10px; /* Space below the text */
+  padding: 5px; /* Padding inside the container */
+}
+
 .main-content {
   width: 70%;
   padding: 20px;
 }
 
 .info-sections {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  gap: 20px;
 }
 
-.personality {
+.personality,
+.appereance,
+.description {
   border: 1px solid #ccc;
   background-color: white;
   padding: 1px;
   box-sizing: border-box;
   text-align: center;
   width: 200px;
+  height: fit-content;
+  background-color: lightgrey;
+  border: 2px solid black;
 }
 
-.personality label {
+.personality label,
+.appereance label {
   display: block;
   margin-bottom: 2px;
   color: #333;
@@ -38,7 +85,8 @@
   font-weight: bold;
 }
 
-.personality input {
+.personality input,
+.appereance input {
   width: 50%;
   padding: 2px;
   margin-bottom: 5px;
@@ -48,13 +96,8 @@
   box-sizing: border-box;
 }
 
-.info-sections {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.profile-photo img {
-  width: 100%;
-  height: auto;
+.description textarea {
+  width: 180px;
+  height: 300px;
+  border: 1px solid black;
 }
